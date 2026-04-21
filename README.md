@@ -2,9 +2,6 @@
 
 A modern and responsive coffee cafe website built using HTML & CSS.
 
-## 🚀 Live Demo
-https://rakshitagahlwat.github.io/coffee-cafe-website/
-
 ## 📌 Features
 - Beautiful landing page with hero section
 - Interactive coffee menu with hover effects
