@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aroma</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        color: white;
+        height: 100vh;
+
+        background: url("/assests/ccccccc") center/cover no-repeat fixed;
+      }
+
+      header {
+        position: fixed;
+        top: 10px;
+        width: 100%;
+        height: 30px;
+        background-color: transparent;
+        box-shadow: transparent;
+        z-index: 1000;
+        border-bottom: 0.1px solid rgba(43, 34, 34, 0.4);
+      }
+
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 20px;
+      }
+
+      .logo {
+        font-size: 22px;
+        font-weight: bold;
+        color: #dac0b3;
+        font-family: 'Playfair Display', serif;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 20px;
+        text-align: center;
+        margin-left: 50px;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        font-weight: 500;
+        margin-left: 13px;
+      }
+
+      .nav-links a:hover {
+        color: #fce5c3;
+      }
+
+      .auth-buttons a {
+        text-decoration: none;
+        padding: 6px 12px;
+        margin-left: 8px;
+        margin-right: 10px;
+        border-radius: 5px;
+        font-size: 14px;
+      }
+
+      .auth-buttons a:hover {
+        color: #806946;
+      }
+
+      .login {
+        border: 1px solid white;
+        color: white;
+      }
+
+      .login:hover {
+        border: 1px solid#806946;
+      }
+
+      .signup {
+        border: 1px solid white;
+        color: white;
+      }
+      .signup:hover {
+        border: 1px solid#806946;
+      }
+
+      .hero {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+      }
+
+      .hero-img {
+        display: none;
+      }
+
+      .hero-text {
+        position: absolute;
+        top: 50%;
+        left: 190px;
+        transform: translateY(-50%);
+        max-width: 500px;
+      }
+
+      .hero-text h2 {
+        font-size: 40px;
+        margin: 10px 0;
+        margin-bottom: 40px;
+        font-weight: 100;
+        font-family:
+          "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      }
+
+      .hero-text p {
+        font-size: 15px;
+        line-height: 1.5;
+        margin-bottom: 30px;
+        font-family: Georgia, "Times New Roman", Times, serif;
+      }
+
+      .hero-text button {
+        background: orange;
+        border: none;
+        padding: 12px 25px;
+        border-radius: 30px;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .hero-text button:hover {
+        background: #806946;
+      }
+      .services {
+        background-color: antiquewhite;
+        height: 100vh;
+        width: 100%;
+        color: black;
+        display: flex;
+      }
+      .left {
+        height: 100vh;
+        width: 50%;
+        background-color: antiquewhite;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .left img {
+        width: 300px;
+        border-radius: 10px;
+        height: 390px;
+        transform: rotate(-5deg);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      }
+      .left img:hover {
+        transform: rotate(0deg) scale(1.05);
+        transition: 0.3s ease;
+      }
+      .right {
+        height: 100vh;
+        width: 50%;
+        background-color: antiquewhite;
+        overflow: hidden;
+      }
+
+      .up {
+        height: 50%;
+        width: 100%;
+        display: flex;
+        text-align: start;
+      }
+
+      .up h1 {
+        color: #513203;
+        font-size: 100px;
+        font-family: "Times New Roman", Times, serif;
+        margin-top: 150px;
+      }
+
+      .down {
+        height: 50%;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      .down p {
+        color: #513203;
+        text-align: start;
+        font-size: 17px;
+        margin-top: 45px;
+      }
+      .view {
+        background: #513203;
+        border: none;
+        padding: 12px 25px;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        margin-top: 35px;
+        margin-left: 2px;
+      }
+
+      .about {
+        height: 100vh;
+        width: 100%;
+        background-color: rgb(199, 144, 72);
+        color: black;
+        text-align: center;
+        display: flex;
+      }
+      .left2 {
+        height: 100vh;
+        width: 50%;
+        background-color: #4a4743;
+        align-items: end;
+      }
+
+      .up2 {
+        height: 50%;
+        width: 100%;
+        background-color: antiquewhite;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .down2 {
+        height: 50%;
+        width: 100%;
+        background-color: antiquewhite;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-end;
+        padding: 2px;
+        box-sizing: border-box;
+      }
+      .up2 h1 {
+        color: #513203;
+        font-size: 100px;
+        font-family: "Times New Roman", Times, serif;
+        margin-top: 280px;
+        margin-left: 50px;
+      }
+      .down2 p {
+        color: #513203;
+        font-size: 17px;
+        text-align: right;
+        margin-top: 70px;
+      }
+
+      .right2 {
+        height: 100vh;
+        width: 50%;
+        background-color: antiquewhite;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .right2 img {
+        width: 300px;
+        border-radius: 10px;
+        height: 390px;
+        transform: rotate(-5deg);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      }
+
+      .right2 img:hover {
+        transform: rotate(0deg) scale(1.05);
+        transition: 0.3s ease;
+      }
+   
+.cta {
+  background: linear-gradient(to right, #4b2e1e, #6b4c3b);
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+  animation: fadeInUp 1s ease;
+}
+
+.cta-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.cta-content p {
+  margin-bottom: 25px;
+  font-size: 16px;
+}
+
+.cta button {
+  padding: 12px 25px;
+  background: white;
+  color: #4b2e1e;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 500;
+}
+
+.cta button:hover {
+  background: #f5ede3;
+  transform: scale(1.05);
+}
+
+.footer {
+  background: #2e1c12;
+  color: #ddd;
+  padding: 50px 20px 20px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.footer h2, .footer h3 {
+  color: white;
+}
+
+.footer p, .footer a {
+  color: #ccc;
+  font-size: 14px;
+  text-decoration: none;
+  display: block;
+  margin: 5px 0;
+}
+
+.footer a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 13px;
+  border-top: 1px solid #555;
+  padding-top: 15px;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+   
+</style>
+  </head>
+
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="logo"><div class="logo">Aroma Heaven</div></div>
+
+        <div class="nav-links">
+          <a href="#">Home</a>
+          <a href="feedback.html">About</a>
+          <a href="menu.html">Services</a>
+          <a href="book.html">Book</a>
+          <a href="contact.html">Contact</a>
+
+        </div>
+
+        <div class="auth-buttons">
+          <a href="login.html" class="login">Login</a>
+          <a href="signup.html" class="signup">Signup</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-text">
+        <h2>Aroma Coffee Brands</h2>
+        <p>
+          Aroma Haven is the place where you can get flavorful coffee strains<br />from
+          global elite brands and roasters at very affordable price.
+        </p>
+        <button>Order Now</button>
+        <button>Explore More</button>
+      </div>
+    </section>
+    <div class="services">
+      <div class="left">
+        <img src="/assests/left1.jpg" alt="" />
+      </div>
+      <div class="right">
+        <div class="up">
+          <h1>Coffee Heaven</h1>
+        </div>
+        <div class="down">
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est
+            aliquid nulla officiis, unde dicta nihil dolorem eveniet? Impedit,
+            laudantium itaque minus neque qui ea veniam, praesentium illo
+            exercitationem nisi beatae?
+          </p>
+          <a href="menu.html">
+            <button class="view">View All</button>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="about">
+      <div class="left2">
+        <div class="up2">
+          <h1>Jean's Coffee</h1>
+        </div>
+        <div class="down2">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio
+            tempora cupiditate, maxime aliquam at inventore odit praesentium
+            blanditiis quae. Illum cum illo ab laboriosam reprehenderit
+            voluptatum adipisci nesciunt officiis
+          </p>
+        </div>
+      </div>
+      <div class="right2">
+        <img src="/assests/rightt.jpg" alt="" />
+      </div>
+    </div>
+  
+<section class="cta">
+  <div class="cta-content">
+    <h2>Experience the Perfect Cup</h2>
+    <p>Freshly brewed coffee made with love. Visit us today or order online!</p>
+    <a href="menu.html"><button>Explore Menu</button></a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-brand">
+      <h2>Coffee Heaven</h2>
+      <p>Your daily dose of happiness ☕</p>
+    </div>
+
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <a href="#">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="contact.html">Contact</a>
+      <a href="feedback.html">Feedback</a>
+    </div>
+
+    <div class="footer-social">
+      <h3>Follow Us</h3>
+      <p>Instagram</p>
+      <p>Facebook</p>
+      <p>Twitter</p>
+    </div>
+
+  </div>
+
+  <p class="footer-bottom">© 2026 Coffee Heaven | All Rights Reserved</p>
+</footer>
+</body>
+  </body>
+</html>

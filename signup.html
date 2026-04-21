@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Signup - Aroma Haven</title>
+
+<style>
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("assests/bg") no-repeat center/cover;
+}
+
+.back-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: #5a3e2b;
+  color: white;
+  font-size: 20px;
+  padding: 10px 15px;
+  border-radius: 50%;
+  text-decoration: none;
+  z-index: 1000;
+}
+
+.back-btn:hover {
+  transform: scale(1.1);
+}
+
+.signup-box {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    padding: 35px 30px;
+    width: 340px;
+    border-radius: 15px;
+    text-align: center;
+
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.signup-box h2 {
+    margin-bottom: 20px;
+    color: white;
+    font-family: cursive;
+}
+
+.signup-box input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+
+    border: none;
+    outline: none;
+    border-radius: 25px;
+
+    background: rgba(255,255,255,0.2);
+    color: white;
+}
+
+.signup-box input::placeholder {
+    color: #ddd;
+}
+
+.signup-box button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+
+    border: none;
+    border-radius: 25px;
+
+    background: linear-gradient(45deg, #8b5e3c, #a9745b);
+    color: white;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.signup-box button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(139,94,60,0.8);
+}
+
+.signup-box p {
+    margin-top: 15px;
+    color: white;
+    font-size: 14px;
+}
+
+.signup-box a {
+    color: #ffcc80;
+    text-decoration: none;
+}
+
+</style>
+</head>
+
+<body>
+<a href="index.html" class="back-btn">←</a>
+<div class="signup-box">
+    <h2>Create Account</h2>
+
+    <input type="text" placeholder="👤 Full Name">
+    <input type="email" placeholder="📧 Email">
+    <input type="text" placeholder="👤 Username">
+    <input type="password" placeholder="🔒 Password">
+    <input type="password" placeholder="🔒 Confirm Password">
+
+    <button>Sign Up</button>
+
+    <p>Already have an account? <a href="login.html">Login</a></p>
+</div>
+
+</body>
+</html>

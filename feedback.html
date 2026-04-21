@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Feedback</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f5ede3;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background: #4b2e1e;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    .navbar h2 {
+      margin: 0;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .navbar a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+    }
+
+    .navbar a:hover {
+      text-decoration: underline;
+    }
+
+    .back-btn {
+      position: fixed;
+      top: 80px;
+      left: 20px;
+      background: #5a3e2b;
+      color: white;
+      font-size: 20px;
+      padding: 10px 15px;
+      border-radius: 50%;
+      text-decoration: none;
+      z-index: 1000;
+    }
+
+    .back-btn:hover {
+      transform: scale(1.1);
+    }
+
+    .title {
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 42px;
+      color: #4b2e1e;
+      margin-top: 40px;
+    }
+
+    .subtitle {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #6b4c3b;
+    }
+
+    .feedback-container {
+      display: flex;
+      gap: 40px;
+      padding: 40px;
+      max-width: 1100px;
+      margin: auto;
+      flex-wrap: wrap;
+    }
+
+    .feedback-form {
+      flex: 1;
+      background: white;
+      padding: 30px;
+      border-radius: 18px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    }
+
+    .feedback-form form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .feedback-form input,
+    .feedback-form textarea {
+      margin-bottom: 15px;
+      padding: 12px;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+      transition: 0.3s;
+    }
+
+    .feedback-form input:focus,
+    .feedback-form textarea:focus {
+      outline: none;
+      border-color: #8b5e3c;
+      box-shadow: 0 0 5px rgba(139,94,60,0.3);
+    }
+
+    .feedback-form button {
+      padding: 12px;
+      background-color: #5a3e2b;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .feedback-form button:hover {
+      background-color: #3e2a1d;
+    }
+
+    .stars {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+      margin-bottom: 15px;
+    }
+
+    .stars input {
+      display: none;
+    }
+
+    .stars label {
+      font-size: 25px;
+      color: #ccc;
+      cursor: pointer;
+    }
+
+    .stars input:checked ~ label,
+    .stars label:hover,
+    .stars label:hover ~ label {
+      color: gold;
+    }
+
+    .reviews {
+      flex: 1;
+    }
+
+    .reviews h2 {
+      margin-bottom: 20px;
+      color: #3a2a1f;
+    }
+
+    .review-card {
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      margin-bottom: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+      transition: 0.3s;
+    }
+
+    .review-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .review-card p {
+      margin: 0 0 10px;
+      color: #555;
+    }
+
+    .review-card span {
+      font-size: 14px;
+      color: #888;
+    }
+
+  </style>
+</head>
+
+<body>
+<nav class="navbar">
+  <h2>Aroma Heaven</h2>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="contact.html">Contact</a>
+    <a href="feedback.html">Feedback</a>
+  </div>
+</nav>
+
+<a href="index.html" class="back-btn">←</a>
+
+<h1 class="title">Customer Feedback</h1>
+<p class="subtitle">Tell us about your coffee experience ☕</p>
+
+<div class="feedback-container">
+
+  <div class="feedback-form">
+    <form>
+      <input type="text" placeholder="Your Name" required>
+
+      <div class="stars">
+        <input type="radio" name="star" id="star5"><label for="star5">★</label>
+        <input type="radio" name="star" id="star4"><label for="star4">★</label>
+        <input type="radio" name="star" id="star3"><label for="star3">★</label>
+        <input type="radio" name="star" id="star2"><label for="star2">★</label>
+        <input type="radio" name="star" id="star1"><label for="star1">★</label>
+      </div>
+
+      <textarea placeholder="Write your feedback..." rows="5"></textarea>
+
+      <button type="submit">Submit Feedback</button>
+    </form>
+  </div>
+
+  <div class="reviews">
+    <h2>What Our Customers Say</h2>
+
+    <div class="review-card">
+      <p>"Amazing ambiance and coffee quality!"</p>
+      <span>- Zara Khan ⭐⭐⭐⭐⭐</span>
+    </div>
+
+    <div class="review-card">
+      <p>"Best cold coffee in town. Highly recommended."</p>
+      <span>- Rakshita ⭐⭐⭐⭐</span>
+    </div>
+
+    <div class="review-card">
+      <p>"Loved the vibe and service."</p>
+      <span>- Vivek ⭐⭐⭐⭐⭐</span>
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>

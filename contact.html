@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Coffee Heaven</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f5ede3;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background: #4b2e1e;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    .navbar h2 {
+      margin: 0;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .navbar a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 400;
+    }
+
+    .navbar a:hover {
+      text-decoration: underline;
+    }
+
+    /* BACK BUTTON */
+    .back-btn {
+      position: fixed;
+      top: 80px;
+      left: 20px;
+      background: #5a3e2b;
+      color: white;
+      font-size: 20px;
+      padding: 10px 15px;
+      border-radius: 50%;
+      text-decoration: none;
+      z-index: 1000;
+      transition: 0.3s;
+    }
+
+    .back-btn:hover {
+      transform: scale(1.1);
+      background: #3e2a1d;
+    }
+
+    /* TITLES */
+    .title {
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 42px;
+      color: #4b2e1e;
+      margin-top: 40px;
+    }
+
+    .subtitle {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #6b4c3b;
+    }
+
+    /* LAYOUT */
+    .contact-container {
+      display: flex;
+      gap: 40px;
+      padding: 40px;
+      max-width: 1100px;
+      margin: auto;
+      flex-wrap: wrap;
+    }
+
+    /* CONTACT INFO */
+    .contact-info {
+      flex: 1;
+      background: #fff;
+      padding: 30px;
+      border-radius: 18px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    }
+
+    .contact-info h2 {
+      margin-bottom: 20px;
+      color: #3a2a1f;
+    }
+
+    .contact-info p {
+      margin: 10px 0;
+      color: #555;
+    }
+
+    .socials span {
+      display: inline-block;
+      margin-right: 10px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+
+    /* FORM */
+    .contact-form {
+      flex: 1;
+      background: #fff;
+      padding: 30px;
+      border-radius: 18px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    }
+
+    .contact-form form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      margin-bottom: 15px;
+      padding: 12px;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+      transition: 0.3s;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      outline: none;
+      border-color: #8b5e3c;
+      box-shadow: 0 0 5px rgba(139,94,60,0.3);
+    }
+
+    .contact-form button {
+      padding: 12px;
+      background-color: #5a3e2b;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .contact-form button:hover {
+      background-color: #3e2a1d;
+    }
+
+    /* MAP */
+    .map iframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      margin-top: 20px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <h2>Coffee Heaven</h2>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="contact.html">Contact</a>
+    <a href="feedback.html">Feedback</a>
+  </div>
+</nav>
+
+<!-- BACK BUTTON -->
+<a href="index.html" class="back-btn">←</a>
+
+<h1 class="title">Get in Touch</h1>
+<p class="subtitle">We’d love to hear from you ☕</p>
+
+<div class="contact-container">
+
+  <!-- CONTACT INFO -->
+  <div class="contact-info">
+    <h2>Contact Details</h2>
+    <p><strong>📍 Address:</strong> 123 Coffee Street, Delhi</p>
+    <p><strong>📞 Phone:</strong> +91 98765 43210</p>
+    <p><strong>📧 Email:</strong> coffeeheaven@email.com</p>
+
+    <div class="socials">
+      <span>🌐 Instagram</span>
+      <span>🌐 Facebook</span>
+      <span>🌐 Twitter</span>
+    </div>
+  </div>
+
+  <!-- CONTACT FORM -->
+  <div class="contact-form">
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <input type="text" placeholder="Subject">
+      <textarea placeholder="Your Message" rows="5"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+</div>
+
+<!-- MAP -->
+<div class="map">
+  <iframe src="https://maps.google.com/maps?q=delhi&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+</div>
+
+</body>
+</html>

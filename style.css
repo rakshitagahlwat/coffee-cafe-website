@@ -1,0 +1,36 @@
+.navbar {
+    display: flex;              /* makes everything inline */
+    justify-content: space-between; /* logo left, links right */
+    align-items: center;        /* vertical alignment */
+    background-color: #222;
+    padding: 15px 30px;
+}
+
+.logo {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Make links inline */
+.nav-links {
+    list-style: none;
+    display: flex;   /* makes li inline */
+    gap: 20px;       /* space between items */
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline; /* optional (flex already handles it) */
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Hover */
+.nav-links a:hover {
+    color: orange;
+}
