@@ -50,6 +50,9 @@ coffee-cafe-website/
 ## 👩‍💻 Author
 Rakshita Gahlawat
 
+## Live link
+https://coffee-caf.netlify.app/
+
 ---
 
 ✨ This project is created for learning and frontend practice.
